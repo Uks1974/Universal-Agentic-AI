@@ -1,19 +1,18 @@
 # utils_llm.py
+
 from openai import OpenAI
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
+def llm_call(messages, api_key, model="gpt-4o-mini"):
+    """
+    Generic LLM call utility.
+    Uses user-provided API key (BYOK).
+    """
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI(api_key=api_key)
 
-def llm_call(system_prompt, user_prompt):
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ],
-        temperature=0.2
+        model=model,
+        messages=messages
     )
+
     return response.choices[0].message.content
