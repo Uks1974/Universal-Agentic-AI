@@ -1,0 +1,11 @@
+streamlit
+pandas
+openai
+python-docx
+python-pptx
+reportlab
+Pillow
+
+# PDF support
+pdfplumber
+pdfminer.six
