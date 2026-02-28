@@ -163,10 +163,12 @@ h1, h2, h3 {{ color: {text}; }}
 
 .chat-message {{
     animation: fadeSlideIn 0.4s ease-in-out;
-    background-color: #1e293b;
+    background-color: {chat_bg};
+    color:{text};
     padding: 0.8rem;
     border-radius: 6px;
     margin-top: 0.6rem;
+    border-left: 4px solid {chat_border};
 }}
 </style>
 """, unsafe_allow_html=True)
@@ -355,6 +357,7 @@ elif page == "Export":
 
 
         st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
