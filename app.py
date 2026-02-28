@@ -238,7 +238,7 @@ if page == "Upload":
     st.subheader(t("📤 Upload File", "📤 फ़ाइल अपलोड करें"))
 
     uploaded = st.file_uploader(
-        t("Upload Word / Excel / PDF / "Word / Excel / PDF / अपलोड करें"),
+        t("Upload Word / Excel / PDF / Word / Excel / PDF / अपलोड करें"),
         type=["xlsx", "xls", "pdf", "docx", "pptx"]
     )
 
@@ -354,4 +354,5 @@ elif page == "Export":
 
 
         st.markdown('</div>', unsafe_allow_html=True)
+
 
