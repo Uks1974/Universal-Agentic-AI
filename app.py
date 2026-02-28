@@ -238,7 +238,7 @@ if page == "Upload":
     st.subheader(t("📤 Upload File", "📤 फ़ाइल अपलोड करें"))
 
     uploaded = st.file_uploader(
-        t("Upload:- Word / Excel / Ppwerpoint & PDF",
+        t("Upload:- Word / Excel / Powerpoint & PDF",
           "Word / Excel / PDF & Powerpoint अपलोड करें"),
         type=["xlsx", "xls", "pdf", "docx", "pptx"]
     )
@@ -251,7 +251,7 @@ if page == "Upload":
         ext = uploaded.name.split(".")[-1].lower()
         file_type_map = {
             "xlsx": "excel", "xls": "excel",
-            "pdf": "pdf", "docx": "word",
+            "pdf": "pdf", "docx": "word","doc": "word",
             "pptx": "ppt"
             
         }
@@ -355,6 +355,7 @@ elif page == "Export":
 
 
         st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
