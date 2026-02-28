@@ -127,9 +127,17 @@ def t(en, hi):
 # GLOBAL CSS (LIGHT / DARK)
 # =========================================================
 if st.session_state.dark_mode:
-    bg, card, text = "#0f172a", "#020617", "#e5e7eb"
+    bg = "#0f172a"
+    card = "#020617"
+    text = "#e5e7eb"
+    chat_bg = "#1e293b"
+    chat_border = "#38bdf8"
 else:
-    bg, card, text = "#f5f7fa", "#ffffff", "#111827"
+    bg = "#f5f7fa"
+    card = "#ffffff"
+    text = "#111827"
+    chat_bg = "#f1f5f9"
+    chat_border = "#2563eb"
 
 st.markdown(f"""
 <style>
@@ -357,6 +365,7 @@ elif page == "Export":
 
 
         st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
