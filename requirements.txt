@@ -9,3 +9,4 @@ pdfplumber
 pdfminer.six
 numpy
 matplotlib
+openpyxl
