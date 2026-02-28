@@ -238,8 +238,8 @@ if page == "Upload":
     st.subheader(t("📤 Upload File", "📤 फ़ाइल अपलोड करें"))
 
     uploaded = st.file_uploader(
-        t("Upload Word / Excel / PDF / Image", "Word / Excel / PDF / Image अपलोड करें"),
-        type=["xlsx", "xls", "pdf", "docx", "pptx", "png", "jpg", "jpeg"]
+        t("Upload Word / Excel / PDF / Image", "Word / Excel / PDF / अपलोड करें"),
+        type=["xlsx", "xls", "pdf", "docx", "pptx"]
     )
 
     if uploaded:
@@ -251,8 +251,8 @@ if page == "Upload":
         file_type_map = {
             "xlsx": "excel", "xls": "excel",
             "pdf": "pdf", "docx": "word",
-            "pptx": "ppt",
-            "png": "image", "jpg": "image", "jpeg": "image"
+            "pptx": "ppt"
+            
         }
 
         st.session_state.data = parse_file(uploaded.name, file_type_map.get(ext))
@@ -351,5 +351,6 @@ elif page == "Export":
 
         for k, v in st.session_state.generated_files.items():
             st.download_button(k.upper(), open(v, "rb"), v)
+
 
         st.markdown('</div>', unsafe_allow_html=True)
