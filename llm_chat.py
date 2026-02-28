@@ -1,5 +1,5 @@
 # llm_chat.py
-
+print("DEBUG: llm_chat.py loaded, chat_with_data has api_key")
 from utils_llm import llm_call
 
 def chat_with_data(context, question, api_key):
@@ -13,3 +13,4 @@ def chat_with_data(context, question, api_key):
     ]
 
     return llm_call(messages, api_key)
+
